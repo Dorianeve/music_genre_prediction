@@ -25,13 +25,30 @@ Dataset consists in 10,000 entries with 100 entries per class/label. The classes
 The dataset has 30 columns of which: 1 is the label column, and 28 the the "features" columns.
 The features are all continuous variables, extracted with the python library "LIBROSA". The "labels" ara categorical.
 These are:
-
+- tempo, beats (track beats detection)
+- chromagram (chromagram from a waveform)
+- rms (root-mean-square value for each frame of audio)
+- spectral centroid (the ”centre of mass” for a sound is located and is calculated as the weighted mean of the frequencies present in the sound)
+- spectral bandwidth
+- spectral rolloff (the frequency below which a specified percentage of the total spectral energy lies)
+- mfcc - Mel-Frequency Cepstral Coefficients (MFCCs are a small set of features which concisely describe the overall shape of a spectral envelope)
 
 The features analysis suggests that they are almost normally distributed, which suggests the utilization of the StandardScaler() at a later stage, before launching the training algoritms. There are no categorical features to be encoded.
 Performing a correlation analysis, it seems that some of the features are highly positively or negatively correlated.
 These are the highly correlated features:
 
-
+- spectral_centroid 0.979633
+- rolloff 0.979633
+- tempo 0.966179
+- beats 0.966179
+- spectral_bandwidth 0.956194
+- zero_crossing_rate 0.874755
+- mfcc6 0.837294
+- mfcc8 0.837294
+- spectral_centroid -0.940171
+- mfcc2 -0.940171
+- rolloff -0.934305
+- spectral_bandwidth -0.896660
 
 It is decided then to drop 'tempo', 'spectral centroid', 'mfcc2' and 'mfcc8' features, to reduce the correlation between features therefore not to undermine the performance of algoritms sensitive to correlation (such as RandomForest). 
 The data explorative part shows how the problem is not linearly separable, this means that we should use non-linear classifiers.
