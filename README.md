@@ -115,3 +115,8 @@ Comparing the two outcomes, in 60% of the cases the same genre was predicted by 
 The music submitted for prediction belongs to the world of independent music, therefore the genres predicted might be quite biased due to the different quality of audio production and processing. 
 
 ## References
+Dataset - https://www.kaggle.com/insiyeah/musicfeatures
+Audio features information and extraction - https://librosa.org/doc/latest/index.html
+"What is the difference between Extra Trees and Random Forest?" - https://quantdare.com/what-is-the-difference-between-extra-trees-and-random-forest/
+Lansdown B, "Machine Learning for Music Genre Classification", University of Birmingham, September 2019. 
+Boxler D, "Machine Learning Techniques Applied to Musical Genre Recognition", Colorado State University, 2020.
