@@ -101,7 +101,7 @@ Pipeline:
 - Evaluating with "accuracy" parameter: 0.7114
 - Plot confusion matrix
 
-## Resulsts' Analysis
+## Results' Analysis
 Confronting the accuracy of the different algorithms:
 - AdaBoost(ExtraTrees) 0.7114
 - ExtraTrees 0.6885
