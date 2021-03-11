@@ -26,12 +26,12 @@ The dataset has 30 columns of which: 1 is the label column, and 28 the the "feat
 The features are all continuous variables, extracted with the python library "LIBROSA". The "labels" ara categorical.
 These are:
 - tempo, beats (track beats detection)
-- chromagram (chromagram from a waveform)
+- chromagram (pitch - capture melodic and harmonic features)
 - rms (root-mean-square value for each frame of audio)
 - spectral centroid (the ”centre of mass” for a sound is located and is calculated as the weighted mean of the frequencies present in the sound)
-- spectral bandwidth
+- spectral bandwidth (width of sound intensity, function of time and frequency)
 - spectral rolloff (the frequency below which a specified percentage of the total spectral energy lies)
-- mfcc - Mel-Frequency Cepstral Coefficients (MFCCs are a small set of features which concisely describe the overall shape of a spectral envelope)
+- mfcc - Mel-Frequency Cepstral Coefficients (MFCCs are a small set of features which concisely describe the overall shape of a spectral envelope, "Cepstrum" is the velocity of the spectrum change)
 
 The features analysis suggests that they are almost normally distributed, which suggests the utilization of the StandardScaler() at a later stage, before launching the training algoritms. There are no categorical features to be encoded.
 Performing a correlation analysis, it seems that some of the features are highly positively or negatively correlated.
